@@ -78,7 +78,7 @@ const PositionsOfResponsibilityCard = ({
               {item.tags.map((tag, tIndex) => (
                 <span
                   key={tIndex}
-                  className="px-2.5 py-0.5 bg-neutral/10 text-neutral-content text-xs rounded-full border border-base-300 font-medium"
+                  className="px-2.5 py-0.5 bg-neutral/40 text-neutral-content text-xs rounded-full border border-base-300 font-medium"
                 >
                   #{tag.replace('#', '')}
                 </span>
