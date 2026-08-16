@@ -221,6 +221,7 @@ interface Experience {
   from: string;
   to: string;
   companyLink?: string;
+  logo?: string;
 }
 
 interface Certification {
@@ -228,6 +229,7 @@ interface Certification {
   name?: string;
   year?: string;
   link?: string;
+  logo?: string;
 }
 
 interface Education {
@@ -235,6 +237,29 @@ interface Education {
   degree?: string;
   from: string;
   to: string;
+  logo?: string;
+}
+
+interface CodingProfile {
+  name: string;
+  link: string;
+}
+
+interface Achievement {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+}
+
+interface PositionOfResponsibility {
+  position: string;
+  company?: string;
+  from: string;
+  to: string;
+  description?: string;
+  logo?: string;
+  tags?: Array<string>;
 }
 
 interface Publication {
@@ -356,6 +381,21 @@ interface Config {
    * Education list
    */
   educations?: Array<Education>;
+
+  /**
+   * Coding profiles
+   */
+  codingProfiles?: Array<CodingProfile>;
+
+  /**
+   * Achievements
+   */
+  achievements?: Array<Achievement>;
+
+  /**
+   * Positions of Responsibility
+   */
+  positionsOfResponsibility?: Array<PositionOfResponsibility>;
 
   /**
    * Publication list

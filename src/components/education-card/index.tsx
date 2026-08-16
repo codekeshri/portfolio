@@ -1,24 +1,39 @@
 import React from 'react';
 import { SanitizedEducation } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+import LazyImage from '../lazy-image';
 
 const ListItem = ({
-  time,
   degree,
   institution,
+  logo,
 }: {
-  time: React.ReactNode;
   degree?: React.ReactNode;
   institution?: React.ReactNode;
+  logo?: string;
 }) => (
-  <li className="mb-5 ml-4">
+  <li className="mb-5 ml-4 flex gap-4 items-start">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal">{institution}</div>
+    {logo && (
+      <div className="flex-shrink-0 w-12 h-12 relative flex items-center justify-center overflow-hidden rounded bg-base-200 border border-base-300 my-1.5 ml-2.5 mr-1.5">
+        <LazyImage
+          src={logo}
+          alt={typeof institution === 'string' ? institution : 'logo'}
+          placeholder={skeleton({
+            widthCls: 'w-full',
+            heightCls: 'h-full',
+            shape: '',
+          })}
+        />
+      </div>
+    )}
+    <div className="flex-grow">
+      <h3 className="font-semibold text-sm">{degree}</h3>
+      <div className="mb-4 font-normal text-sm">{institution}</div>
+    </div>
   </li>
 );
 
@@ -35,10 +50,6 @@ const EducationCard = ({
       array.push(
         <ListItem
           key={index}
-          time={skeleton({
-            widthCls: 'w-5/12',
-            heightCls: 'h-4',
-          })}
           degree={skeleton({
             widthCls: 'w-6/12',
             heightCls: 'h-4',
@@ -73,9 +84,9 @@ const EducationCard = ({
                 {educations.map((item, index) => (
                   <ListItem
                     key={index}
-                    time={`${item.from} - ${item.to}`}
                     degree={item.degree}
                     institution={item.institution}
+                    logo={item.logo}
                   />
                 ))}
               </>

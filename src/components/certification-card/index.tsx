@@ -1,30 +1,47 @@
-import React from 'react';
 import { SanitizedCertification } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+import LazyImage from '../lazy-image';
 
 const ListItem = ({
   year,
   name,
   body,
   link,
+  logo,
 }: {
   year?: React.ReactNode;
   name?: React.ReactNode;
   body?: React.ReactNode;
   link?: string;
+  logo?: string;
 }) => (
-  <li className="mb-5 ml-4">
+  <li className="mb-5 ml-4 flex gap-4 items-start">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{year}</div>
-    <div className="font-medium">
-      <a href={link} target="_blank" rel="noreferrer">
-        {name}
-      </a>
+    {logo && (
+      <div className="flex-shrink-0 w-12 h-12 relative flex items-center justify-center overflow-hidden rounded bg-base-200 border border-base-300 my-1.5 ml-2.5 mr-1.5">
+        <LazyImage
+          src={logo}
+          alt={typeof name === 'string' ? name : 'logo'}
+          placeholder={skeleton({
+            widthCls: 'w-full',
+            heightCls: 'h-full',
+            shape: '',
+          })}
+        />
+      </div>
+    )}
+    <div className="flex-grow">
+      <div className="my-0.5 text-xs">{year}</div>
+      <div className="font-semibold text-sm">
+        <a href={link} target="_blank" rel="noreferrer" className="hover:underline">
+          {name}
+        </a>
+      </div>
+      <h3 className="mb-4 font-normal text-xs text-base-content/80">{body}</h3>
     </div>
-    <h3 className="mb-4 font-normal">{body}</h3>
   </li>
 );
 
@@ -85,6 +102,7 @@ const CertificationCard = ({
                     name={certification.name}
                     body={certification.body}
                     link={certification.link}
+                    logo={certification.logo}
                   />
                 ))}
               </>

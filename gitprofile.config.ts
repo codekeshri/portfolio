@@ -25,7 +25,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['codekeshri/quotesApp', 'codekeshri/ecommerce', 'codekeshri/fitluck', 'codekeshri/chatapp'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['codekeshri/quotesApp', 'codekeshri/ecommerce', 'codekeshri/fitluck', 'codekeshri/group-chat'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -85,6 +85,7 @@ const CONFIG = {
       from: 'January 2025',
       to: 'May 2026',
       companyLink: 'https://www.neosofttech.com/',
+      logo: 'https://university.neosofttech.com/public/images/neosoft.svg',
     },
     {
       company: 'Teamopine Solutions',
@@ -92,6 +93,7 @@ const CONFIG = {
       from: 'August 2024',
       to: 'December 2025',
       companyLink: 'https://www.teamopine.com/',
+      logo: 'https://www.teamopine.com/Content/images/logo.svg',
     },
     {
       company: 'SISL Infotech',
@@ -99,6 +101,7 @@ const CONFIG = {
       from: 'April 2024',
       to: 'August 2024',
       companyLink: 'https://www.sislinfotech.com/',
+      logo: 'https://www.sislinfotech.com/wp-content/uploads/2019/07/SISL-Logo-1.png',
     },
     {
       company: 'Sharpener',
@@ -106,6 +109,7 @@ const CONFIG = {
       from: 'March 2023',
       to: 'May 2024',
       companyLink: 'https://www.sharpener.tech/',
+      logo: 'https://sharpener.blob.core.windows.net/landing/logo/sharpenerLogo.png',
     },
   ],
   certifications: [
@@ -114,6 +118,7 @@ const CONFIG = {
       body: 'Level 1 Competitive Programming, An intensive program focused on mastering data structures and advanced algorithms to efficiently solve complex, time-constrained programming problems.',
       year: 'March 2024',
       link: 'https://www.linkedin.com/in/codekeshri/overlay/Certifications/704419553/treasury/?profileId=ACoAAEOStusBtGkfgeInQVSO-Htgo-l6dYTXRG0',
+      logo: 'https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ],
   codingProfiles: [
@@ -123,25 +128,68 @@ const CONFIG = {
     },
     {
       name: 'LeetCode',
-      link: 'https://leetcode.com/u/codekeshri/', 
+      link: 'https://leetcode.com/u/codekeshri/',
     },
     {
       name: 'Codeforces',
-      link: 'https://codeforces.com/profile/Code_keshri', // Replace if username differs
+      link: 'https://codeforces.com/profile/Code_keshri',
     },
     {
       name: 'CodeChef',
-      link: 'https://www.codechef.com/users/codekeshri', // Replace if username differs
+      link: 'https://www.codechef.com/users/codekeshri',
     },
     {
       name: 'GeeksforGeeks',
-      link: 'https://www.geeksforgeeks.org/profile/arvind_keshri', // Replace if username differs
-    }
+      link: 'https://www.geeksforgeeks.org/profile/arvind_keshri',
+    },
   ],
   educations: [
     {
       institution: 'Delhi Technological University',
       degree: 'B.E.',
+      from: '2020',
+      to: '2024',
+      logo: 'https://we-recycle.org/wp-content/uploads/2014/03/dtu-logo.png?w=300',
+    },
+  ],
+  achievements: [
+    {
+      title: 'Tilkamanhi University CAT topper',
+      description: 'Ranked 2nd among the 100,000+ applicants for admission in a highly competitive state-level admission test for Intermediate.',
+      imageUrl: 'https://tmbu.collegeesolution.org/Images/TMBU_LOGO.png',
+      link: 'https://www.linkedin.com/in/codekeshri/',
+    },
+    {
+      title: 'High Performer in Enterprise Insurance',
+      description: 'Selected as one of the key members for handling Production Live for Motor Insurance and Mobile Insurance External Vendors in Serverless Microservices Setup.',
+      imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&auto=format&fit=crop',
+      link: 'https://www.linkedin.com/in/codekeshri/',
+    },
+    {
+      title: 'Solving For Programming Contests',
+      description: 'Recognized in top 25% in Leetcode & Codechef contests, performing consistently, competing farely and always pushing toward achieving 1% more.',
+      imageUrl: 'https://images.unsplash.com/photo-1775994121053-35fd6d91703b?q=80&w=1316&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://www.linkedin.com/in/codekeshri/',
+    },
+  ],
+  positionsOfResponsibility: [
+    {
+      position: 'Mentor & Leader for Backend',
+      company: 'Sharpener',
+      from: 'August 2023',
+      to: 'May 2024',
+      description: 'Mentored 20+ contributors, fostering impactful community contributions and engagement on backend projects.',
+      logo: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&auto=format&fit=crop',
+      tags: ['ContributeWithMe', 'OpenSourceCommunity', 'BuildInPublic'],
+    },
+    {
+      position: 'Leading the Resourcing Team',
+      company: 'Neosoft',
+      from: 'May 2025',
+      to: 'Mar 2026',
+      description: 'Led a team of 6 developers outsourced to insurance client for serverless microservices backend, engaging the team in business understanding participation and improving company visibility at client end.',
+      logo: 'https://images.unsplash.com/photo-1541844053589-346841d0b34c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      tags: ['TeamLeadership', 'LeadWithImpact', 'EventLeadership'],
     },
   ],
   publications: [],

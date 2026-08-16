@@ -21,6 +21,9 @@ import DetailsCard from './details-card';
 import SkillCard from './skill-card';
 import ExperienceCard from './experience-card';
 import EducationCard from './education-card';
+import CodingProfilesCard from './coding-profiles-card';
+import AchievementsCard from './achievements-card';
+import PositionsOfResponsibilityCard from './positions-of-responsibility-card';
 import CertificationCard from './certification-card';
 import { GithubProject } from '../interfaces/github-project';
 import GithubProjectCard from './github-project-card';
@@ -191,20 +194,18 @@ const GitProfile = ({ config }: { config: Config }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
               <div className="col-span-1">
                 <div className="grid grid-cols-1 gap-6">
-                  {!sanitizedConfig.themeConfig.disableSwitch && (
-                    <ThemeChanger
-                      theme={theme}
-                      setTheme={setTheme}
-                      loading={loading}
-                      themeConfig={sanitizedConfig.themeConfig}
-                    />
-                  )}
-                  <AvatarCard
+                   <AvatarCard
                     profile={profile}
                     loading={loading}
                     avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
                     resumeFileUrl={sanitizedConfig.resume.fileUrl}
                   />
+                  {sanitizedConfig.educations.length !== 0 && (
+                    <EducationCard
+                      loading={loading}
+                      educations={sanitizedConfig.educations}
+                    />
+                  )}
                   <DetailsCard
                     profile={profile}
                     loading={loading}
@@ -223,16 +224,24 @@ const GitProfile = ({ config }: { config: Config }) => {
                       experiences={sanitizedConfig.experiences}
                     />
                   )}
+                  {sanitizedConfig.codingProfiles.length !== 0 && (
+                    <CodingProfilesCard
+                      loading={loading}
+                      codingProfiles={sanitizedConfig.codingProfiles}
+                    />
+                  )}
                   {sanitizedConfig.certifications.length !== 0 && (
                     <CertificationCard
                       loading={loading}
                       certifications={sanitizedConfig.certifications}
                     />
                   )}
-                  {sanitizedConfig.educations.length !== 0 && (
-                    <EducationCard
+                  {!sanitizedConfig.themeConfig.disableSwitch && (
+                    <ThemeChanger
+                      theme={theme}
+                      setTheme={setTheme}
                       loading={loading}
-                      educations={sanitizedConfig.educations}
+                      themeConfig={sanitizedConfig.themeConfig}
                     />
                   )}
                 </div>
@@ -246,6 +255,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       githubProjects={githubProjects}
                       loading={loading}
                       googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                    />
+                  )}
+                  {sanitizedConfig.achievements.length !== 0 && (
+                    <AchievementsCard
+                      loading={loading}
+                      achievements={sanitizedConfig.achievements}
                     />
                   )}
                   {sanitizedConfig.publications.length !== 0 && (
@@ -262,6 +277,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                         sanitizedConfig.projects.external.projects
                       }
                       googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                    />
+                  )}
+                  {sanitizedConfig.positionsOfResponsibility.length !== 0 && (
+                    <PositionsOfResponsibilityCard
+                      loading={loading}
+                      positions={sanitizedConfig.positionsOfResponsibility}
                     />
                   )}
                   {sanitizedConfig.blog.display && (

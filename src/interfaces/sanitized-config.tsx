@@ -75,6 +75,7 @@ export interface SanitizedExperience {
   from: string;
   to: string;
   companyLink?: string;
+  logo?: string;
 }
 
 export interface SanitizedCertification {
@@ -82,6 +83,7 @@ export interface SanitizedCertification {
   name?: string;
   year?: string;
   link?: string;
+  logo?: string;
 }
 
 export interface SanitizedEducation {
@@ -89,6 +91,29 @@ export interface SanitizedEducation {
   degree?: string;
   from: string;
   to: string;
+  logo?: string;
+}
+
+export interface SanitizedCodingProfile {
+  name: string;
+  link: string;
+}
+
+export interface SanitizedAchievement {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+}
+
+export interface SanitizedPositionOfResponsibility {
+  position: string;
+  company?: string;
+  from: string;
+  to: string;
+  description?: string;
+  logo?: string;
+  tags?: Array<string>;
 }
 
 export interface SanitizedPublication {
@@ -133,6 +158,9 @@ export interface SanitizedConfig {
   skills: Array<string>;
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
+  codingProfiles: Array<SanitizedCodingProfile>;
+  achievements: Array<SanitizedAchievement>;
+  positionsOfResponsibility: Array<SanitizedPositionOfResponsibility>;
   certifications: Array<SanitizedCertification>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
