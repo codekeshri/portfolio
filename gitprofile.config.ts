@@ -55,21 +55,6 @@ const CONFIG = {
   social: {
     linkedin: 'codekeshri',
     x: 'iarvindkeshri',
-    mastodon: '',
-    researchGate: '',
-    facebook: '',
-    instagram: '',
-    reddit: '',
-    threads: '',
-    youtube: '', // example: 'pewdiepie'
-    udemy: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    discord: '',
-    telegram: '',
     website: 'https://codekeshri.github.io/portfolio/',
     phone: '',
     email: 'arvidce@gmail.com',
