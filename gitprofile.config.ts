@@ -146,7 +146,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'Delhi Technological University',
-      degree: 'B.E.',
+      degree: 'Bachelor of Engineering, Mech.',
       from: '2020',
       to: '2024',
       logo: 'https://we-recycle.org/wp-content/uploads/2014/03/dtu-logo.png?w=300',
