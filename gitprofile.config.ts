@@ -14,7 +14,7 @@ const CONFIG = {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
@@ -33,25 +33,25 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Fitluck',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'A platform to track your gym liftings, log your results and stay motivated',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          link: 'https://fitluck.netlify.app/login',
         },
         {
-          title: 'Project Name',
+          title: 'Microservices E-commerce',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Advanced Ecommerce Backend at scale in Spring Boot using Eureka, Kafka, API Gateway & Docker handling real-time order processing, inventory management and secure payments,
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://github.com/codekeshri/ecommerce',
         },
       ],
     },
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+  seo: { title: 'Portfolio of Arvind Keshri ', description: '', imageURL: '' },
   social: {
     linkedin: 'codekeshri',
     x: 'iarvindkeshri',
@@ -68,12 +68,11 @@ const CONFIG = {
     'Spring Boot',
     'JavaScript',
     'Node.js',
-    'React.js',
-    'MySQL',
     'PostgreSQL',
     'MongoDB',
     'Docker',
     'Git',
+    'React.js',
     'Angular',
     'C++',
     'Python',
@@ -122,8 +121,6 @@ const CONFIG = {
     {
       institution: 'Delhi Technological University',
       degree: 'B.E.',
-      from: '',
-      to: '',
     },
   ],
   publications: [],
