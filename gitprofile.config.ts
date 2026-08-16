@@ -64,19 +64,18 @@ const CONFIG = {
       'https://drive.google.com/file/d/12Ev9MpaxIH9L3VoSaR7sewl58RTG4dfS/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
+    'Machine Learning',
+    'Generative AI',
+    'Agentic AI',
     'Java',
     'Spring Boot',
-    'JavaScript',
-    'Node.js',
-    'PostgreSQL',
-    'MongoDB',
+    'MERN',
     'Docker',
     'Git',
-    'React.js',
-    'Angular',
-    'C++',
-    'Python',
-    'Typescript',
+    'AWS',
+    'Microservices',
+    'Serverless',
+    'PostgreSQL',
     'Linux',
   ],
   experiences: [
@@ -112,10 +111,32 @@ const CONFIG = {
   certifications: [
     {
       name: 'TLE eliminators',
-      body: 'Level 1 Competitive Programming',
-      year: '2024',
+      body: 'Level 1 Competitive Programming, An intensive program focused on mastering data structures and advanced algorithms to efficiently solve complex, time-constrained programming problems.',
+      year: 'March 2024',
       link: 'https://www.linkedin.com/in/codekeshri/overlay/Certifications/704419553/treasury/?profileId=ACoAAEOStusBtGkfgeInQVSO-Htgo-l6dYTXRG0',
     },
+  ],
+  codingProfiles: [
+    {
+      name: 'GitHub',
+      link: 'https://github.com/codekeshri',
+    },
+    {
+      name: 'LeetCode',
+      link: 'https://leetcode.com/u/codekeshri/', 
+    },
+    {
+      name: 'Codeforces',
+      link: 'https://codeforces.com/profile/Code_keshri', // Replace if username differs
+    },
+    {
+      name: 'CodeChef',
+      link: 'https://www.codechef.com/users/codekeshri', // Replace if username differs
+    },
+    {
+      name: 'GeeksforGeeks',
+      link: 'https://www.geeksforgeeks.org/profile/arvind_keshri', // Replace if username differs
+    }
   ],
   educations: [
     {
