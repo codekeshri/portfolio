@@ -43,7 +43,7 @@ const CONFIG = {
         {
           title: 'Microservices E-commerce',
           description:
-            'Advanced Ecommerce Backend at scale in Spring Boot using Eureka, Kafka, API Gateway & Docker handling real-time order processing, inventory management and secure payments,
+            'Advanced Ecommerce Backend at scale in Spring Boot using Eureka, Kafka, API Gateway & Docker handling real-time order processing, inventory management and secure payments',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://github.com/codekeshri/ecommerce',
@@ -191,11 +191,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: ``,
 
   enablePWA: true,
 };
